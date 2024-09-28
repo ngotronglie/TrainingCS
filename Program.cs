@@ -17,6 +17,12 @@ namespace ConsoleApp1 // Namespace: Tạo một không gian tên để tổ ch�
 
     internal class Program // Lớp chính chứa hàm Main và các phương thức khác, nơi bắt đầu thực thi chương trình.
     {
+        /*
+         * Phương thức Main là điểm khởi đầu của chương trình. Mọi chương trình C# đều cần có phương thức Main.
+         * internal: Lớp Program chỉ có thể được truy cập từ trong cùng một assembly.
+         * static: Phương thức Main có thể được gọi mà không cần tạo đối tượng của lớp Program.
+         * string[] args: Một mảng chuỗi chứa các tham số dòng lệnh được truyền khi khởi chạy ứng dụng (trong ví dụ này không sử dụng).
+         */
         private static int Sum(int x, int y) // Phương thức tĩnh Sum, nhận hai tham số x, y và trả về tổng của chúng.
         {
             return x + y; // Trả về tổng của x và y.
@@ -96,16 +102,77 @@ namespace ConsoleApp1 // Namespace: Tạo một không gian tên để tổ ch�
             Console.WriteLine("Giá trị của x bây giờ là: " + x); // In giá trị của x sau khi giảm (3)
 
         }
+        static void toanTuNangCao()
+        {
+            // ----- toan tu so sanh -------
+            int a = 10; // Khai báo biến a với giá trị 10
+            int b = 20; // Khai báo biến b với giá trị 20
 
-        /*
-         * Phương thức Main là điểm khởi đầu của chương trình. Mọi chương trình C# đều cần có phương thức Main.
-         * internal: Lớp Program chỉ có thể được truy cập từ trong cùng một assembly.
-         * static: Phương thức Main có thể được gọi mà không cần tạo đối tượng của lớp Program.
-         * string[] args: Một mảng chuỗi chứa các tham số dòng lệnh được truyền khi khởi chạy ứng dụng (trong ví dụ này không sử dụng).
-         */
+            // Sử dụng toán tử so sánh và in kết quả
+            Console.WriteLine("a == b: " + (a == b)); // In ra false vì a không bằng b
+            Console.WriteLine("a != b: " + (a != b)); // In ra true vì a khác b
+            Console.WriteLine("a > b: " + (a > b));   // In ra false vì a không lớn hơn b
+            Console.WriteLine("a < b: " + (a < b));   // In ra true vì a nhỏ hơn b
+            Console.WriteLine("a >= b: " + (a >= b)); // In ra false vì a không lớn hơn hoặc bằng b
+            Console.WriteLine("a <= b: " + (a <= b)); // In ra true vì a nhỏ hơn hoặc bằng b
+
+            // Thay đổi giá trị của a
+            a = 20;
+
+            // Kiểm tra lại các điều kiện
+            Console.WriteLine("\nSau khi thay đổi a thành 20:");
+            Console.WriteLine("a == b: " + (a == b)); // In ra true vì a bằng b
+            Console.WriteLine("a != b: " + (a != b)); // In ra false vì a không khác b
+            Console.WriteLine("a > b: " + (a > b));   // In ra false vì a không lớn hơn b
+            Console.WriteLine("a < b: " + (a < b));   // In ra false vì a không nhỏ hơn b
+            Console.WriteLine("a >= b: " + (a >= b)); // In ra true vì a lớn hơn hoặc bằng b
+            Console.WriteLine("a <= b: " + (a <= b)); // In ra true vì a lớn hơn hoặc bằng b
+
+
+            // ------- toán tử logic ------
+
+            bool condition1 = true;  // Biểu thức điều kiện 1
+            bool condition2 = false; // Biểu thức điều kiện 2
+
+            // Sử dụng toán tử AND (&&)
+            Console.WriteLine("condition1 && condition2: " + (condition1 && condition2)); // In ra false
+                                                                                          // Chỉ in ra true nếu cả condition1 và condition2 đều true
+
+            // Sử dụng toán tử OR (||)
+            Console.WriteLine("condition1 || condition2: " + (condition1 || condition2)); // In ra true
+                                                                                          // In ra true nếu ít nhất một trong hai điều kiện là true
+
+            // Sử dụng toán tử NOT (!)
+            Console.WriteLine("!condition1: " + !condition1); // In ra false
+                                                              // In ra true nếu condition1 là false và ngược lại
+
+            // Kiểm tra điều kiện kết hợp
+            int h = 5;
+            int l = 10;
+
+            // Sử dụng toán tử logic trong điều kiện
+            if (h < 10 && l > 5)
+            {
+                Console.WriteLine("Cả hai điều kiện đều đúng!"); // In ra nếu cả hai điều kiện đều đúng
+            }
+
+            if (h < 5 || l > 5)
+            {
+                Console.WriteLine("Ít nhất một điều kiện đúng!"); // In ra vì b > 5 là đúng
+            }
+
+            // Sử dụng toán tử NOT trong điều kiện
+            if (!(h == l)) // Nếu a không bằng b
+            {
+                Console.WriteLine("a và l không bằng nhau!"); // In ra vì a và b không bằng nhau
+            }
+        }
+
+        
         static void Main(string[] args)
         {
-            ToanTuSoHoc();
+            toanTuNangCao();
+            //ToanTuSoHoc();
             // Nhập và xuất dữ liệu từ người dùng
             // NhapXuatDuLieu(); // Gọi phương thức NhapXuatDuLieu để thực thi các thao tác nhập và xuất dữ liệu.
             Console.ReadLine(); // Dừng màn hình console lại để người dùng có thể xem kết quả.
