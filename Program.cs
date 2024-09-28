@@ -66,6 +66,37 @@ namespace ConsoleApp1 // Namespace: Tạo một không gian tên để tổ ch�
             Console.WriteLine("Số a = {0}, Số b = {1}", a, b); // In ra giá trị của a và b.
         }
 
+        static void ToanTuSoHoc()
+        {
+            int a = 13;
+            int b = 4;
+            Console.WriteLine("{0} + {1} = {2}", a,b, a+ b);
+            Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+            Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+            Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+            Console.WriteLine("{0} % {1} = {2}", a, b, a % b);
+
+            int x = 5;
+
+            // Sử dụng toán tử tăng tiền tố
+            Console.WriteLine("Giá trị của x trước khi tăng (tiền tố): " + ++x); // Tăng x lên 1 và in giá trị (6)
+
+            // Sử dụng toán tử tăng hậu tố
+            Console.WriteLine("Giá trị của x sau khi tăng (hậu tố): " + x++); // In giá trị (6), rồi tăng x lên 1
+            Console.WriteLine("Giá trị của x bây giờ là: " + x); // In giá trị của x sau khi tăng (7)
+
+            // Reset giá trị của x
+            x = 5;
+
+            // Sử dụng toán tử giảm tiền tố
+            Console.WriteLine("Giá trị của x trước khi giảm (tiền tố): " + --x); // Giảm x xuống 1 và in giá trị (4)
+
+            // Sử dụng toán tử giảm hậu tố
+            Console.WriteLine("Giá trị của x sau khi giảm (hậu tố): " + x--); // In giá trị (4), rồi giảm x xuống 1
+            Console.WriteLine("Giá trị của x bây giờ là: " + x); // In giá trị của x sau khi giảm (3)
+
+        }
+
         /*
          * Phương thức Main là điểm khởi đầu của chương trình. Mọi chương trình C# đều cần có phương thức Main.
          * internal: Lớp Program chỉ có thể được truy cập từ trong cùng một assembly.
@@ -74,8 +105,9 @@ namespace ConsoleApp1 // Namespace: Tạo một không gian tên để tổ ch�
          */
         static void Main(string[] args)
         {
+            ToanTuSoHoc();
             // Nhập và xuất dữ liệu từ người dùng
-            NhapXuatDuLieu(); // Gọi phương thức NhapXuatDuLieu để thực thi các thao tác nhập và xuất dữ liệu.
+            // NhapXuatDuLieu(); // Gọi phương thức NhapXuatDuLieu để thực thi các thao tác nhập và xuất dữ liệu.
             Console.ReadLine(); // Dừng màn hình console lại để người dùng có thể xem kết quả.
         }
     }
