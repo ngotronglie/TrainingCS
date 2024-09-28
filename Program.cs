@@ -16,6 +16,24 @@ namespace ConsoleApp1 // Namespace: Định nghĩa một không gian tên để 
         }
     }
 
+    class KieuDuLieu
+    {
+        int a = 1;
+        float _float = 2f ;   
+        double _double = 3f;
+
+        string _string = "this is class KieuDuLieu string";
+        bool _bool = true ;
+
+        char KituA = 'a';
+        // float myFloat;   // Đặt tên biến theo quy tắc đặt tên chuẩn
+        // myFloat = 6.7f;  // Sử dụng hậu tố 'f' để chỉ định giá trị là float
+
+        object _object = new object 
+
+
+    }
+
 
     internal class Program // Lớp chính chứa hàm Main
     {
@@ -24,6 +42,8 @@ namespace ConsoleApp1 // Namespace: Định nghĩa một không gian tên để 
         {
             return x + y;
         }
+
+        
         /*
          * internal: Lớp này chỉ có thể được truy cập từ trong cùng một assembly.
          * class Program: Khai báo lớp Program chứa phương thức chính của chương trình.
@@ -52,6 +72,7 @@ namespace ConsoleApp1 // Namespace: Định nghĩa một không gian tên để 
             // Dừng chương trình lại để có thể xem kết quả
             Console.ReadLine();
         }
+
 
         
 
